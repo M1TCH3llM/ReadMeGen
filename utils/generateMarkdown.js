@@ -17,9 +17,38 @@ function generateMarkdown(data) {
   ## Description
   ${data.description}
 
+  ##Table Of Contents
+  -[Project description](#Description)
+  -[Usage](#Usage)
+  -[Instillation](#Installation)
+  -[Credits](#Credits)
+  -[Licenses](#Licenses)
+  -[Badges](#Badges)
+  -[Features](#features)
+  -[Test](#Test)
+
+  ## Usage 
+  ${data.usage}
+
   ## Installation
+  ${data.installation}
+
+  ## Credits
+  ${data.credits}
+
+  ## Licenses
+  ${data.license}
+
+  ## Badges
+  ${data.badges}
+
+  ## Features
+  ${data.features}
+
+  ## Test
+  ${data.test}
 
 `;
 }
 
-module.exports = generateMarkdown
+module.exports = generateMarkdown;
