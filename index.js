@@ -4,7 +4,8 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 const generateMarkdown = require("./utils/generateMarkdown");
-const { log } = require("console");
+const { log } = require("console"); // = console.log 
+log("Hello Im Here")
 // TODO: Create an array of questions for user input
 const questions = [
   {
@@ -16,11 +17,6 @@ const questions = [
     name: "description",
     type: "input",
     message: "What does it do?",
-  },
-  {
-    name: "tableOfContents",
-    type: "input",
-    message: "",
   },
   {
     name: "usage",
@@ -38,9 +34,13 @@ const questions = [
     message: "List your collaborators, with github links",
   },
   {
-    name: "licenses",
-    type: "input",
-    message: "What licenses do you have",
+    name: "license",
+    type: "list",
+    message: "License?",
+    choices: ["MIT", "ICS", "GNUPLv3"],
+    filter(val) {
+      return val.toLowerCase();
+    },
   },
   {
     // need to figure this out
@@ -63,15 +63,23 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, function (err){
-        if (err) {
-            console.log("Could not save file");
-        } else {
-            console.log("Success: new README.md file generated inside the current folder");
+  //   fs.writeFile(fileName, data, function (err){
+  //       if (err) {
+  //           console.log("Could not save file");
+  //       } else {
+  //           console.log("Success: new README.md file generated inside the current folder");
 
-        }
-    });
+  //       }
+  //   });
+  fs.writeFile(fileName, data, (err) =>
+    err
+      ? console.log("Could not save file")
+      : console.log(
+          "Success: new README.md file generated inside the current folder"
+        )
+  );
 }
+
 // TODO: Create a function to initialize app
 function init() {
   inquirer
@@ -81,7 +89,7 @@ function init() {
       console.log(answers);
 
       const markDown = generateMarkdown(answers);
-        writeToFile("README.md", markDown);
+      writeToFile("README.md", markDown);
     })
     .catch((error) => {
       console.error(error);
