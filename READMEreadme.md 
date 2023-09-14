@@ -6,7 +6,6 @@ This is a Node.js script that generates a README.md file based on a provided tem
 ## Table Of Contents
 - [Description](#Description)
 - [Usage](#Usage)
-- [Installation](#Installation)
 - [Credits](#Credits)
 - [Licenses](#Licenses)
 - [Badges](#Badges)
@@ -24,11 +23,6 @@ To use this README.md generator, follow these steps:
 4. Follow the prompts to enter information about your project.
 5. The generator will create a README.md file in the same directory with your project details.
 
-## Installation
-To install the required dependencies for this generator, use the following command:
-
-```bash
-npm install inquirer
 
 ##Credits
 
