@@ -1,0 +1,46 @@
+# README.md Generator
+
+## Description
+This is a Node.js script that generates a README.md file based on a provided template. It uses the Inquirer.js package to prompt the user for information about their project and then creates a README.md file with the specified structure and content.
+
+## Table Of Contents
+- [Description](#Description)
+- [Usage](#Usage)
+- [Installation](#Installation)
+- [Credits](#Credits)
+- [Licenses](#Licenses)
+- [Badges](#Badges)
+- [Features](#Features)
+- [Test](#Test)
+
+## Usage
+To use this README.md generator, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Navigate to the directory containing the generator script.
+3. Open your terminal or command prompt and run the script using `node generate-readme.js`.
+4. Follow the prompts to enter information about your project.
+5. The generator will create a README.md file in the same directory with your project details.
+
+## Installation
+To install the required dependencies for this generator, use the following command:
+
+```bash
+npm install inquirer
+
+##Credits
+This README.md generator was created by Mitch Morgan.
+
+##Licenses
+
+##Badges
+
+##Features
+
+Easy-to-use command-line interface.
+Customizable template for generating README.md files.
+Supports adding license information and badges.
+Test
+You can test the generator by running it and verifying that the generated README.md file contains the correct project information.
+
+Feel free to customize and extend this generator to suit your specific needs. Happy README.md generation!
