@@ -3,11 +3,10 @@ const inquirer = require("inquirer");
 
 const fs = require("fs");
 
-
 //links mark down to index file
 const generateMarkdown = require("./utils/generateMarkdown");
-const { log } = require("console"); // = console.log 
-log("Hello Im Here")
+const { log } = require("console"); // = console.log
+log("Hello Im Here");
 // TODO: Create an array of questions for user input
 const questions = [
   {
@@ -61,16 +60,36 @@ const questions = [
     message:
       "Go the extra mile and write tests for your application. Then provide examples on how to run them here.",
   },
+  {
+    name: "link",
+    type: "input",
+    message: "Enter deployed link",
+  },
+  {
+    name: "media",
+    type: "input",
+    message: "Enter media link",
+  },
+  {
+    name: "github",
+    type: "input",
+    message: "Enter GitHub URL",
+  },
+  {
+    name: "email",
+    type: "input",
+    message: "Enter email",
+  },
 ];
 
 // TODO: Create a function to write README file
 //function grabs data from init/ prompt function and writes it to a file titled read me
 function writeToFile(fileName, data) {
-  // fs = writes files 
+  // fs = writes files
   fs.writeFile(fileName, data, (err) =>
     err
-    // lets you know if file was successfully generated
-      ? console.log("Could not save file")
+      ? // lets you know if file was successfully generated
+        console.log("Could not save file")
       : console.log(
           "Success: new README.md file generated inside the current folder"
         )
@@ -83,7 +102,7 @@ function init() {
   // node function displays questions
   inquirer
     .prompt(questions)
-    // saves answers 
+    // saves answers
     .then((answers) => {
       // Use user feedback for... whatever!!
       console.log(answers);

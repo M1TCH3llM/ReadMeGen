@@ -141,8 +141,11 @@ function generateMarkdown(data) {
   -[Credits](#Credits)
   -[Licenses](#Licenses)
   -[Badges](#Badges)
-  -[Features](#features)
+  -[Features](#Features)
   -[Test](#Test)
+  -[Link](#Link)
+  -[Media](#Media)
+  -[Contact](ontact)
 
   ## Usage 
   ${data.usage}
@@ -167,6 +170,16 @@ function generateMarkdown(data) {
 
   ## Test
   ${data.test}
+
+  ## Link
+  [Deployed Link](${data.link})
+
+  ## Media
+  ![Media Link](${data.media})
+
+  ## Contact
+  [GitHub Link](${data.github})
+  ${data.email}
 
 `;
 }
