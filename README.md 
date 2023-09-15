@@ -21,7 +21,7 @@ To use this README.md generator, follow these steps:
 2. Navigate to the directory containing the generator script.
 3. Open your terminal or command prompt and run the script using `node index`.
 4. Follow the prompts to enter information about your project.
-5. The generator will create a README.md file in the same directory with your project details.
+5. The generator will create a NewREADME.md file in the same directory with your project details.
 
 
 ##Credits
@@ -41,3 +41,13 @@ Supports adding license information and badges.
 ##Test
 
 You can test the generator by running it and verifying that the generated README.md file contains the correct project information.
+
+##Link
+
+[GitHub Repository](https://github.com/M1TCH3llM/ReadMeGen)
+
+##Media
+
+Link to video
+
+[QR to move](https://drive.google.com/file/d/1ATOkC3h4-uHztjw1Hdz_ZCC_1_67Q-Vx/view)

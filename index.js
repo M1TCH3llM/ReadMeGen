@@ -110,7 +110,7 @@ function init() {
       // passes data to markdown generator
       const markDown = generateMarkdown(answers);
       // passes key and data to write to file function
-      writeToFile("README.md", markDown);
+      writeToFile("NewReadME.md", markDown);
     })
     // displays errors if any
     .catch((error) => {
